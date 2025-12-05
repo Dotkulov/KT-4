@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Хашкуев Кантемир</title>
+    <meta name="description" content="Портфолио студента колледжа Информационных технологий 'IThub' Хашкуева Кантемира">
+    <style>
+        /* Базовые стили и сброс */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        /* Стили для заголовков */
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+        }
+
+        /* Стили для ссылок */
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Стили для шапки */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.1;
+        }
+
+        header h1, header h2 {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1::after {
+            background: white;
+        }
+
+        /* Навигация */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: var(--transition);
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        /* Основное содержимое */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Стили для статей */
+        article {
+            margin-bottom: 1.5rem;
+        }
+
+        article:last-child {
+            margin-bottom: 0;
+        }
+
+        article h3 {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        article h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        /* Списки */
+        ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        /* Стили для боковой панели */
+        aside {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+
+        aside article {
+            margin-bottom: 2rem;
+        }
+
+        aside article:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Стили для подвала */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        footer nav ul {
+            margin: 1rem 0;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        footer a:hover {
+            color: var(--light-color);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Специальные эффекты */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: var(--shadow);
+            margin: 0 auto 1rem;
+            display: block;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Псевдоэлементы для выделения */
+        blockquote {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            position: relative;
+        }
+
+        blockquote::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--light-color);
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            z-index: -1;
+        }
+
+        /* Стили для адреса */
+        address {
+            font-style: normal;
+        }
+
+        address p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+
+        /* НОВЫЕ СТИЛИ ДЛЯ КТ №4 - ИНТЕРАКТИВНЫЕ ЭЛЕМЕНТЫ */
+        
+        /* 1. АНИМИРОВАННОЕ МЕНЮ */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            75% { transform: translateX(3px); }
+        }
+
+        nav a:hover {
+            animation: pulse 0.5s ease, shake 0.3s ease 0.5s;
+        }
+
+        /* 2. ИНТЕРАКТИВНОЕ ЛОТО / КАРТОЧКИ НАВЫКОВ */
+        .skills-loto {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.7s;
+        }
+
+        .skill-card:hover::before {
+            left: 100%;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px) rotateX(10deg) rotateY(5deg);
+            box-shadow: 0 15px 30px rgba(52, 152, 219, 0.3);
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        }
+
+        .skill-card.flipped {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        }
+
+        .skill-card .front, .skill-card .back {
+            backface-visibility: hidden;
+            transition: transform 0.6s;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .skill-card .front {
+            transform: rotateY(0deg);
+        }
+
+        .skill-card .back {
+            transform: rotateY(180deg);
+            display: none;
+            font-size: 0.9rem;
+            color: #2c3e50;
+        }
+
+        .skill-card.flipped .front {
+            transform: rotateY(-180deg);
+        }
+
+        .skill-card.flipped .back {
+            transform: rotateY(0deg);
+            display: flex;
+        }
+
+        /* 3. СЛАЙДЕР ПРОЕКТОВ */
+        .project-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            height: 300px;
+        }
+
+        .slider-container {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #4a6572 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(255, 255, 255, 0.1) 50%,
+                transparent 70%
+            );
+            animation: slide-shine 8s infinite linear;
+        }
+
+        @keyframes slide-shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .slide h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .slide p {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .slider-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .slider-btn:hover {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--secondary-color);
+            transform: scale(1.2);
+        }
+
+        .dot:hover {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        /* 4. АНИМИРОВАННЫЕ КНОПКИ */
+        .animated-btn {
+            background: linear-gradient(45deg, var(--secondary-color), #2980b9);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .animated-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .animated-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .animated-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .animated-btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* 5. 3D ЭФФЕКТ ДЛЯ ПРОФИЛЬНОЙ ФОТОГРАФИИ */
+        .profile-3d-container {
+            perspective: 1000px;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1rem;
+        }
+
+        .profile-img-3d {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .profile-img-3d:hover {
+            transform: rotateY(20deg) rotateX(10deg) scale(1.05);
+        }
+
+        /* 6. ПОДСВЕТКА ЭЛЕМЕНТОВ ПРИ НАВЕДЕНИИ */
+        .highlight-hover {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-hover::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .highlight-hover:hover::after {
+            left: 100%;
+        }
+
+        /* Применение подсветки к секциям */
+        section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 7. АНИМАЦИЯ ЗАГРУЗКИ ЭЛЕМЕНТОВ */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating-element {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Адаптивность новых элементов */
+        @media (max-width: 768px) {
+            .skills-loto {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+            
+            .project-slider {
+                height: 250px;
+            }
+            
+            .slide h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта с навигацией -->
+    <header>
+        <div class="profile-3d-container">
+            <img src="data:image/webp;base64,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SzaF3FKzyGMwanTcfMh2UnSOi6ZAADrPMN7oR8blGITJqHOvc7qeuu2UOn6XQL0bJaPRIKQQrOr7en8HpkOyLWpGWF9xb2Kmh8w5CWc3hgzYKLSxi88lTGM2Vr03+MdFaMgDASlVR6ikRwimlkiSbNVXR216bQajddde2usRdxtZzi3u+nPxlBefuCmmVGs/ZH+FxlECqzpNL+64CSayNf/Td5N16DNTa3oKdqck0AAAAEVYSUbQAQAARXhpZgAASUkqAAgAAAAFAA4BAgAYAQAASgAAABoBBQABAAAA0AEAABsBBQABAAAA2AEAABIBAwABAAAAAQAAAAAAAABNT1NDT1csIFJVU1NJQSAtIERFQ0VNQkVSIDE5ICAoUlVTU0lBIE9VVCkgUnVzc2lhbiBQcmVzaWRlbnQgVmxhZGltaXIgUHV0aW4gc3BlYWtzIGR1cmluZyBoaXMgYW5udWFsIGNhbGwtaW4tc2hvdyBhbmQgcHJlc3MgY29uZmVyZW5jZSBhdCB0aGUgR29zdGlueSBEdm9yIGhhbGwsIERlY2VtYmVyIDE5LCAyMDI0LCBpbiBNb3Njb3csIFJ1c3NpYS4gUHV0aW4gYW5zd2VyZWQgdG8gam91cm5hbGlzdHMgYW5kIHBlb3BsZSBmcm9tIFJ1c3NpYW4gcmVnaW9ucyBkdXJpbmcgYSBmb3VyIGFuZCBoYWxmIGhvdXJzIGxvbmcgYW5udWFsIGV2ZW50LiAoUGhvdG8gYnkgQ29udHJpYnV0b3IvR2V0dHkgSW1hZ2VzKTIwMjQgQ29udHJpYnV0b3IjODUyMzMyOCwBAAABAAAALAEAAAEAAABYTVAg0QYAAGh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyI+Cgk8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgoJCTxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6SXB0YzR4bXBDb3JlPSJodHRwOi8vaXB0Yy5vcmcvc3RkL0lwdGM0eG1wQ29yZS8xLjAveG1sbnMvIiAgIHhtbG5zOkdldHR5SW1hZ2VzR0lGVD0iaHR0cDovL3htcC5nZXR0eWltYWdlcy5jb20vZ2lmdC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBsdXM9Imh0dHA6Ly9ucy51c2VwbHVzLm9yZy9sZGYveG1wLzEuMC8iICB4bWxuczppcHRjRXh0PSJodHRwOi8vaXB0Yy5vcmcvc3RkL0lwdGM0eG1wRXh0LzIwMDgtMDItMjkvIiB4bWxuczp4bXBSaWdodHM9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9yaWdodHMvIiBkYzpSaWdodHM9IjIwMjQgQ29udHJpYnV0b3IjODUyMzMyOCIgcGhvdG9zaG9wOkNyZWRpdD0iR2V0dHkgSW1hZ2VzIiBHZXR0eUltYWdlc0dJRlQ6QXNzZXRJRD0iMjE5MDA3NDE2OCIgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iaHR0cHM6Ly93d3cuZ2V0dHlpbWFnZXMuY29tL2V1bGE/dXRtX21lZGl1bT1vcmdhbmljJmFtcDt1dG1fc291cmNlPWdvb2dsZSZhbXA7dXRtX2NhbXBhaWduPWlwdGN1cmwiIHBsdXM6RGF0YU1pbmluZz0iaHR0cDovL25zLnVzZXBsdXMub3JnL2xkZi92b2NhYi9ETUktUFJPSElCSVRFRC1FWENFUFRTRUFSQ0hFTkdJTkVJTkRFWElORyIgPgo8ZGM6Y3JlYXRvcj48cmRmOlNlcT48cmRmOmxpPkNvbnRyaWJ1dG9yPC9yZGY6bGk+PC9yZGY6U2VxPjwvZGM6Y3JlYXRvcj48ZGM6ZGVzY3JpcHRpb24+PHJkZjpBbHQ+PHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5NT1NDT1csIFJVU1NJQSAtIERFQ0VNQkVSIDE5ICAoUlVTU0lBIE9VVCkgUnVzc2lhbiBQcmVzaWRlbnQgVmxhZGltaXIgUHV0aW4gc3BlYWtzIGR1cmluZyBoaXMgYW5udWFsIGNhbGwtaW4tc2hvdyBhbmQgcHJlc3MgY29uZmVyZW5jZSBhdCB0aGUgR29zdGlueSBEdm9yIGhhbGwsIERlY2VtYmVyIDE5LCAyMDI0LCBpbiBNb3Njb3csIFJ1c3NpYS4gUHV0aW4gYW5zd2VyZWQgdG8gam91cm5hbGlzdHMgYW5kIHBlb3BsZSBmcm9tIFJ1c3NpYW4gcmVnaW9ucyBkdXJpbmcgYSBmb3VyIGFuZCBoYWxmIGhvdXJzIGxvbmcgYW5udWFsIGV2ZW50LiAoUGhvdG8gYnkgQ29udHJpYnV0b3IvR2V0dHkgSW1hZ2VzKTwvcmRmOmxpPjwvcmRmOkFsdD48L2RjOmRlc2NyaXB0aW9uPgo8cGx1czpMaWNlbnNvcj48cmRmOlNlcT48cmRmOmxpIHJkZjpwYXJzZVR5cGU9J1Jlc291cmNlJz48cGx1czpMaWNlbnNvclVSTD5odHRwczovL3d3dy5nZXR0eWltYWdlcy5jb20vZGV0YWlsLzIxOTAwNzQxNjg/dXRtX21lZGl1bT1vcmdhbmljJmFtcDt1dG1fc291cmNlPWdvb2dsZSZhbXA7dXRtX2NhbXBhaWduPWlwdGN1cmw8L3BsdXM6TGljZW5zb3JVUkw+PC9yZGY6bGk+PC9yZGY6U2VxPjwvcGx1czpMaWNlbnNvcj4KCQk8L3JkZjpEZXNjcmlwdGlvbj4KCTwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InciPz4KAA==" alt="Фото Хашкуева Кантемира" class="profile-img-3d floating-element">
+        </div>
+        <h1 class="highlight-hover">Хашкуев Кантемир</h1>
+        <h2>Студент колледжа "IThub" по специальности "Веб-разработчик"</h2>
+        
+        <!-- Анимированное навигационное меню -->
+        <nav>
+            <ul>
+                <li><a href="#about" class="highlight-hover">Обо мне</a></li>
+                <li><a href="#education" class="highlight-hover">Образование</a></li>
+                <li><a href="#skills" class="highlight-hover">Навыки</a></li>
+                <li><a href="#portfolio" class="highlight-hover">Портфолио</a></li>
+                <li><a href="#contact" class="highlight-hover">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое страницы -->
+    <main>
+        <!-- Секция "Обо мне" -->
+        <section id="about" class="highlight-hover">
+            <h2>Обо мне</h2>
+            <article>
+                <h3>Приветствую!</h3>
+                <p>Меня зовут Хашкуев Кантемир, я студент 3 курса колледжа Информационных технологий "IThub".</p>
+                <p>С 2023 по 2025 год обучаюсь по специальности "Веб-разработчик".</p>
+                <p>Увлекаюсь созданием веб-сайтов, изучением новых технологий и постоянно совершенствую свои навыки в области веб-разработки.</p>
+                <blockquote>
+                    "Программирование - это не просто написание кода, это искусство создания решений"
+                </blockquote>
+            </article>
+        </section>
+
+        <!-- Секция "Образование" -->
+        <section id="education" class="highlight-hover">
+            <h2>Образование</h2>
+            <article>
+                <h3>Колледж Информационных технологий "IThub"</h3>
+                <p><strong>Специальность:</strong> Веб-разработчик</p>
+                <p><strong>Период обучения:</strong> 2023 - 2025 гг.</p>
+                <p><strong>Курс:</strong> 3 курс</p>
+                <p><strong>Статус:</strong> Студент</p>
+            </article>
+        </section>
+
+        <!-- Секция "Навыки" с интерактивным лото -->
+        <section id="skills" class="highlight-hover">
+            <h2>Профессиональные навыки</h2>
+            
+            <!-- Интерактивное лото с навыками -->
+            <div class="skills-loto">
+                <div class="skill-card" onclick="this.classList.toggle('flipped')">
+                    <div class="front">
+                        <h4>HTML5</h4>
+                        <p>Нажмите, чтобы узнать больше</p>
+                    </div>
+                    <div class="back">
+                        <p>Продвинутый уровень. Создание семантической и доступной разметки.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" onclick="this.classList.toggle('flipped')">
+                    <div class="front">
+                        <h4>CSS3</h4>
+                        <p>Нажмите, чтобы узнать больше</p>
+                    </div>
+                    <div class="back">
+                        <p>Анимации, Grid, Flexbox, адаптивный дизайн, препроцессоры.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" onclick="this.classList.toggle('flipped')">
+                    <div class="front">
+                        <h4>JavaScript</h4>
+                        <p>Нажмите, чтобы узнать больше</p>
+                    </div>
+                    <div class="back">
+                        <p>ES6+, DOM манипуляции, асинхронное программирование, React основы.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" onclick="this.classList.toggle('flipped')">
+                    <div class="front">
+                        <h4>Git</h4>
+                        <p>Нажмите, чтобы узнать больше</p>
+                    </div>
+                    <div class="back">
+                        <p>Ветвление, слияние, пул реквесты, работа в команде.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" onclick="this.classList.toggle('flipped')">
+                    <div class="front">
+                        <h4>UI/UX</h4>
+                        <p>Нажмите, чтобы узнать больше</p>
+                    </div>
+                    <div class="back">
+                        <p>Прототипирование, пользовательский опыт, Figma, Adobe XD.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" onclick="this.classList.toggle('flipped')">
+                    <div class="front">
+                        <h4>Адаптивность</h4>
+                        <p>Нажмите, чтобы узнать больше</p>
+                    </div>
+                    <div class="back">
+                        <p>Mobile-first подход, медиа-запросы, кроссбраузерная совместимость.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Портфолио" со слайдером -->
+        <section id="portfolio" class="highlight-hover">
+            <h2>Мои проекты</h2>
+            
+            <!-- Слайдер проектов -->
+            <div class="project-slider">
+                <div class="slider-container" id="sliderContainer">
+                    <div class="slide">
+                        <h3>Сайт-визитка</h3>
+                        <p><strong>Описание:</strong> Личный сайт-визитка с информацией о навыках и контактами.</p>
+                        <p><strong>Технологии:</strong> HTML5, CSS3, JavaScript</p>
+                        <p><strong>Особенности:</strong> Адаптивный дизайн, CSS анимации, семантическая верстка</p>
+                    </div>
+                    <div class="slide" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+                        <h3>Лендинг для мероприятия</h3>
+                        <p><strong>Описание:</strong> Одностраничный сайт для IT-конференции с регистрацией участников.</p>
+                        <p><strong>Технологии:</strong> HTML5, CSS3, JavaScript, API</p>
+                        <p><strong>Особенности:</strong> Интерактивная форма, таймер обратного отсчета, галерея</p>
+                    </div>
+                    <div class="slide" style="background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);">
+                        <h3>Интернет-магазин</h3>
+                        <p><strong>Описание:</strong> Учебный проект интернет-магазина электроники с корзиной товаров.</p>
+                        <p><strong>Технологии:</strong> HTML5, CSS3, JavaScript, LocalStorage</p>
+                        <p><strong>Особенности:</strong> Динамическая корзина, фильтрация товаров, модальные окна</p>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" onclick="prevSlide()">‹</button>
+                    <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(0)"></div>
+                        <div class="dot" onclick="goToSlide(1)"></div>
+                        <div class="dot" onclick="goToSlide(2)"></div>
+                    </div>
+                    <button class="slider-btn next-btn" onclick="nextSlide()">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Контакты" -->
+        <section id="contact" class="highlight-hover">
+            <h2>Контакты</h2>
+            
+            <!-- Контактная информация -->
+            <address>
+                <p><strong>Email:</strong> <a href="mailto:hashkuev.kantemir@gmail.com">hashkuev.kantemir@gmail.com</a></p>
+                <p><strong>Телефон:</strong> <a href="tel:+79991234567">+7 (962) 652-91-87</a></p>
+                <p><strong>Город:</strong> Нальчик</p>
+            </address>
+            
+            <!-- Анимированные кнопки -->
+            <div style="margin-top: 2rem; text-align: center;">
+                <button class="animated-btn" onclick="alert('Свяжитесь со мной по почте!')">
+                    📧 Написать письмо
+                </button>
+                <button class="animated-btn" onclick="alert('Скачайте мое резюме!')">
+                    📄 Скачать резюме
+                </button>
+                <button class="animated-btn" onclick="alert('Давайте обсудим проект!')">
+                    💬 Обсудить проект
+                </button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Боковая панель с дополнительной информацией -->
+    <aside class="highlight-hover">
+        <h3>Дополнительная информация</h3>
+        
+        <!-- Языки -->
+        <article>
+            <h4>Языки</h4>
+            <ul>
+                <li>Кабардинский (родной)</li>
+                <li>Русский</li>
+                <li>Английский (базовый уровень B1)</li>
+            </ul>
+        </article>
+        
+        <!-- Хобби -->
+        <article>
+            <h4>Увлечения</h4>
+            <ul>
+                <li>Программирование</li>
+                <li>Фотография</li>
+                <li>Спорт</li>
+                <li>Путешествия</li>
+            </ul>
+        </article>
+        
+        <!-- Достижения -->
+        <article>
+            <h4>Достижения</h4>
+            <ul>
+                <li>Участие в хакатоне "IT-старт 2023"</li>
+                <li>Сертификат курса "Основы веб-разработки"</li>
+            </ul>
+        </article>
+    </aside>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2024 Хашкуев Кантемир. Все права защищены.</p>
+        
+        <!-- Социальные сети -->
+        <nav>
+            <ul>
+                <li><a href="#" class="highlight-hover">VK</a></li>
+                <li><a href="#" class="highlight-hover">Telegram</a></li>
+                <li><a href="#" class="highlight-hover">GitHub</a></li>
+            </ul>
+        </nav>
+        
+        <p>Сайт создан в рамках обучения в колледже "IThub"</p>
+    </footer>
+
+    <script>
+        // Слайдер проектов
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const sliderContainer = document.getElementById('sliderContainer');
+        const totalSlides = slides.length;
+        
+        function updateSlider() {
+            sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+        
+        // Автоматическая прокрутка слайдера
+        setInterval(nextSlide, 5000);
+        
+        // Анимация для карточек навыков при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Плавная прокрутка к якорям
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+        
+        // Добавление случайных эффектов для карточек
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+            
+            card.addEventListener('click', function() {
+                // Добавляем эффект "пульсации" при клике
+                this.style.transform += ' scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = this.style.transform.replace(' scale(0.95)', '');
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
